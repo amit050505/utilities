@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutUsComponent } from './about-us.component';
-
-
+import { AboutUsComponent } from './about-us/about-us.component';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   {
@@ -12,7 +11,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),
+    MatButtonModule],
   exports: [RouterModule]
 })
 export class AboutUsRoutingModule { }

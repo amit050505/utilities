@@ -10,7 +10,7 @@
         <div>
             <section class="example-section" [formGroup]="toppings">
                 <p *ngFor="let b of categories">
-                    <mat-checkbox formControlName="pepperoni">{{b}}</mat-checkbox>
+                    <mat-checkbox (change)="updateFilter('calegories', b)" formControlName="pepperoni">{{b}}</mat-checkbox>
                 </p>
             </section>
         </div>
@@ -28,7 +28,7 @@
         <div>
             <section class="example-section" [formGroup]="toppings">
                 <p *ngFor="let b of brands">
-                    <mat-checkbox formControlName="pepperoni">{{b}}</mat-checkbox>
+                    <mat-checkbox (change)="updateFilter('brands', b)" formControlName="pepperoni">{{b}}</mat-checkbox>
                 </p>
             </section>
         </div>
@@ -47,7 +47,7 @@
         <div>
             <section class="example-section" [formGroup]="toppings">
                 <p *ngFor="let pr of priceRanges">
-                    <mat-checkbox formControlName="pepperoni">{{pr}}</mat-checkbox>
+                    <mat-checkbox (change)="updateFilter('price', pr)" formControlName="pepperoni">{{pr}}</mat-checkbox>
                 </p>
             </section>
         </div>
@@ -66,7 +66,8 @@
         <div>
             <section class="example-section" [formGroup]="toppings">
                 <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                    <mat-radio-button class="example-radio-button" *ngFor="let rt of ratings" [value]="rt">
+                    <mat-radio-button (change)="updateFilter('ratings', rt)" class="example-radio-button"
+                        *ngFor="let rt of ratings" [value]="rt">
                         {{rt}}
                     </mat-radio-button>
                 </mat-radio-group>

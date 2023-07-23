@@ -1,11 +1,45 @@
 <div class="container-fluid">
-    <mat-card>
-        <mat-card-title> Overview</mat-card-title>
-        <mat-card-content>
-            <p>
-               Coming soon...
-            </p>
-        </mat-card-content>
+    <form [formGroup]="textAreaForm">
 
-    </mat-card>
+        <div class="row">
+            <div class="col-md-6" id="sourceData">
+                <nav class="navbar navbar-expand-lg sub-nav-body">
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <button mat-button color="accent" (click)="parseJson()">Parse</button>
+                            </li>
+                            <li class="nav-item">
+                                <button mat-button (click)="minify()">Minify</button>
+                            </li>
+                            <li class="nav-item">
+                                <button mat-button (click)="clear()">Clear</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <textarea name="sourceDatacContent" id="strJson" placeholder="Enter your bizarre JSON here..."
+                    formControlName="strJson"></textarea>
+            </div>
+            <div class="col-md-6" id="resultData">
+                <nav class="navbar navbar-expand-lg sub-nav-body">
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <button mat-button color="accent" (click)="copyFormattedJson()">Copy to clipboard</button>
+                            </li>
+                            <li class="nav-item">
+                                <button mat-button>Clear</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <pre id="rss" name="resultDataContent" contenteditable="true"></pre>
+                <div id="minified"></div>
+            </div>
+        </div>
+    </form>
+
 </div>

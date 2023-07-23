@@ -9,6 +9,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreComponent } from './store/store.component';
 import { FooterComponent } from './footer/footer.component';
+import { FilterService } from './services/filter.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     ContactUsModule,
     AboutUsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

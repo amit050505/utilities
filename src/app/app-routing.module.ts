@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule) 
   },
   {
-    path: 'aboutus', 
+    path: 'jsonParser', 
     loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)  
   },
   {

@@ -1,27 +1,28 @@
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
-        <h2 >Filters</h2>
-        <app-filter [brands]="brands" [categories]="categories"></app-filter>
+        <h2>Filters</h2>
+        <app-filter [brands]="brands" [categories]="categories" 
+        [priceRange]="priceRange"
+        (filterProducts)="filterProductsToShow($event)"></app-filter>
     </mat-drawer>
 
     <div class="example-sidenav-content">
-        <!-- <button type="button" (click)="drawer.toggle()" class="btn-dark">
-            >>
-        </button> -->
-        <!-- <app-users></app-users> -->
         <div class="content-body">
             <div class="container-fluid">
                 <div class="row">
-                    <!-- <div class="col-md-3"></div> -->
                     <div class="col-md-8">
                         <div class="items-container row">
-
                             <div class="item-block" *ngFor="let item of data">
                                 <app-item [data]="item"></app-item>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-*"></div>
+                    <div class="col-md-2">
+                        {{filterQuery | json}}
+                    </div>
+                    <div class="col-md-*">
+                        {{filterQueryList | json}}
+                    </div>
                 </div>
 
             </div>

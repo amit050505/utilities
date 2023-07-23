@@ -1,17 +1,61 @@
 #about-img {
-    width: 100%;
-    height: 200px;
-    position: fixed;
-    bottom: 0px;
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  bottom: 0px;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: center;
- }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+#strJson,
+#rss {
+  line-height: 1.5;
+  text-shadow: 0.015em 0.015em 0 #666;
+  padding: calc(0.75rem - 1px);
+  font-size: 16px;
+
+}
+
+#strJson {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#rss {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#sourceData {
+  background-color: #2980b9;
+  border-right: solid 2px floralwhite;
+}
+
+.sub-nav-body,
+.container-fluid,
+body,
+html {
+  background-color: #2980b9;
+}
+
+.container-fluid {
+  height: 90vh;
+}
+
+textarea,
+pre {
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+#rss {
+  background-color: aliceblue;
+}
